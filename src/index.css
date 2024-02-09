@@ -1,13 +1,66 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-light-grey: #F9F7F7;
+  --color-light-blue: #DBE2EF;
+  --color-medium-blue: #3F72AF;
+  --color-dark-blue: #112D4E;
+}
+body {
+  background-color: var(--color-dark-blue);
+  color: var(--color-light-grey);
+}
+nav {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom:.5px solid var(--color-light-blue);
+  margin-block-end: 2rem;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark-blue);
+}
+ul {
+  list-style: none;
+}
+.navForm {
+  display: flex;
+  margin-inline: auto;
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.navForm input {
+  border-radius: 6px;
+  border: 1px solid var(--color-light-blue);
+  padding: 1rem;
+
+}
+main {
+  border: 2px solid red;
+  background-color: royalblue;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.heading {
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin-inline: auto;
+}
+.team-crest {
+padding: 1rem;
+max-width:25%;
 }
