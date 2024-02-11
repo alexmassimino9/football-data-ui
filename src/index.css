@@ -64,3 +64,7 @@ main {
 padding: 1rem;
 max-width:25%;
 }
+
+.btn-test {
+  border: 2px solid red;
+}

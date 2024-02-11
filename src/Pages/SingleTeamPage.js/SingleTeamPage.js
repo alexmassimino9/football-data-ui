@@ -1,5 +1,6 @@
 import React from "react";
 import crest from "../../assets/61.png";
+import { useGlobalContext } from "../../context/AppContext";
 const SingleTeamPage = () => {
   // const {
   //   area,
@@ -19,13 +20,20 @@ const SingleTeamPage = () => {
   //   lastUpdated,
   // } = getTeam;
 
+  const { isLoading } = useGlobalContext();
   return (
     <main>
-      <div className="heading">
-        <img src={crest} alt={"crest"} className="team-crest" />
+      {isLoading ? (
+        <div>
+          <h1>loading...</h1>
+        </div>
+      ) : (
+        <div className="heading">
+          <img src={crest} alt={"crest"} className="team-crest" />
 
-        <h1 className="title">Chelsea FC</h1>
-      </div>
+          <h1 className="title">Chelsea FC</h1>
+        </div>
+      )}
     </main>
   );
 };
